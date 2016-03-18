@@ -91,7 +91,7 @@ public class Aluno {
 	/* C.R.U.D */
 	public void incluir(long codigoAluno, String nome, String endereco, String telefone, String email, String rg,
 			String cpf) {
-		Aluno aluno = new Aluno();
+		AlunoTO aluno = new AlunoTO();
 
 		aluno.setCodigoAluno(codigoAluno);
 		aluno.setNome(nome);
@@ -109,7 +109,7 @@ public class Aluno {
 	}
 
 	public void alterar(long cod, String nome, String endereco, String telefone, String email, String rg, String cpf) {
-		Aluno aluno = new Aluno();
+		AlunoTO aluno = new AlunoTO();
 		aluno.setCodigoAluno(cod);
 		aluno.setNome(nome);
 		aluno.setEndereco(endereco);
@@ -133,7 +133,7 @@ public class Aluno {
 		}
 	}
 
-	public Aluno consultar(long raAluno) {
+	public AlunoTO consultar(long raAluno) {
 		AlunoDAO bd = new AlunoDAO();
 		return bd.consultar(raAluno);
 	}
@@ -141,7 +141,7 @@ public class Aluno {
 	@Override
 	public String toString() {
 		String texto = "Nome: "+ getNome() +
-				"\nEndereço: " + getEndereco() +
+				"\nEndereÃ§o: " + getEndereco() +
 				"\nTelefone: " + getTelefone() + 
 				"\nE-mail: " + getEmail() + 
 				"\nRG: " + getRg() + 
